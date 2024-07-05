@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Player</title>
+</head>
+<body>
+    <h1>Add a New Player</h1>
+    <form method="post" action="{{ url_for('add_person') }}">
+        <label>First Name:</label><br>
+        <input type="text" id="firstname" name="firstname" required><br>
+        <label>Last Name:</label><br>
+        <input type="text" id="last_name" name="lastname" required><br>
+        <label>Username:</label><br>
+        <input type="text" id="username" name="username" required><br>
+        <label>Country:</label><br>
+        <input type="text" id="country" name="country" required><br><br>
+        <button type="submit">Add Player</button>
+    </form>
+    <a href="{{ url_for('index') }}">Back</a>
+</body>
+</html>

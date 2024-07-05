@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Player</title>
+</head>
+<body>
+    <h1>Search Player</h1>
+    <form method="post" action="{{ url_for('search_person') }}">
+        <label>Search:</label><br>
+        <input type="text" id="search_term" name="search_term" required><br><br>
+        <button type="submit">Search</button>
+    </form>
+    
+    <h2>Search Results"</h2>
+    {% if results %}
+        <table border="2">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Username</th>
+                <th>Country</th>
+            </tr>
+            {% for person in results %}
+            <tr>
+                <td>{{ person[0] }}</td>
+                <td>{{ person[1] }}</td>
+                <td>{{ person[2] }}</td>
+                <td>{{ person[3] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+    <a href="{{ url_for('index') }}">Back</a>
+</body>
+</html>

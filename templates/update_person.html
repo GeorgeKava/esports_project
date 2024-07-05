@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Update Player</title>
+</head>
+<body>
+    <h2>Update Player</h2>
+    <form method="post">
+        <label for="firstname">First Name:</label><br>
+        <input type="text" id="firstname" name="firstname" value="{{ person['firstname'] }}"><br>
+        <label for="lastname">Last Name:</label><br>
+        <input type="text" id="lastname" name="lastname" value="{{ person['lastname'] }}"><br>
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" value="{{ person['username'] }}"><br>
+        <label for="country">Country:</label><br>
+        <input type="text" id="country" name="country" value="{{ person['country'] }}"><br><br>
+        <button type="submit">Update Player</button>
+    </form>
+</body>
+</html>
