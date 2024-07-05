@@ -3,6 +3,7 @@ from waitress import serve
 
 app = Flask(__name__)
 
+#write person
 def write_to_file(data):
     with open('data/person.txt', 'a') as file:
         file.write(data +'\n')
