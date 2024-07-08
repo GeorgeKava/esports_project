@@ -19,13 +19,17 @@
                 <th>Lastname</th>
                 <th>Username</th>
                 <th>Country</th>
+                <th>Update</th>
+                <th>Delete</th>
             </tr>
             {% for person in results %}
             <tr>
-                <td>{{ person[0] }}</td>
-                <td>{{ person[1] }}</td>
-                <td>{{ person[2] }}</td>
-                <td>{{ person[3] }}</td>
+                <td>{{ person.firstname }}</td>
+                <td>{{ person.lastname }}</td>
+                <td>{{ person.username }}</td>
+                <td>{{ person.country }}</td>
+                <td><a href="{{ url_for('update_person', id=person.id) }}">Update</a></td>
+                <td><a href="{{ url_for('delete_person', id=person.id) }}">Delete</a></td>
             </tr>
             {% endfor %}
         </table>

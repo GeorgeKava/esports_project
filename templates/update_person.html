@@ -7,14 +7,14 @@
     <h2>Update Player</h2>
     <form method="post">
         <label for="firstname">First Name:</label><br>
-        <input type="text" id="firstname" name="firstname" value="{{ person['firstname'] }}"><br>
+        <input type="text" id="firstname" name="firstname" value="{{ persons.firstname }}"><br>
         <label for="lastname">Last Name:</label><br>
-        <input type="text" id="lastname" name="lastname" value="{{ person['lastname'] }}"><br>
+        <input type="text" id="lastname" name="lastname" value="{{ persons.lastname }}"><br>
         <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username" value="{{ person['username'] }}"><br>
+        <input type="text" id="username" name="username" value="{{ persons.username }}"><br>
         <label for="country">Country:</label><br>
-        <input type="text" id="country" name="country" value="{{ person['country'] }}"><br><br>
-        <button type="submit">Update Player</button>
+        <input type="text" id="country" name="country" value="{{ persons.country }}"><br>
+        <input type="submit" value="Update">
     </form>
 </body>
 </html>
